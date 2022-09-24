@@ -1,0 +1,347 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* ............scrollbar........... */
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(29, 30, 30);
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(175, 175, 175);
+    border-radius: 12px;
+    border: 0.5px solid transparent;
+    background-clip:content-box ;
+}
+
+
+body{
+    background-color: rgb(211, 214, 214);
+    
+}
+/* .............Display............ */
+
+.display{
+    background-image: url('l.jpg');
+    height: 600px;
+    width: 100%;
+    background-size: cover;
+    text-align: center;
+    background-repeat: no-repeat;
+    animation:changeImage 20s linear infinite ;
+
+}
+@keyframes changeImage{
+    0%{
+        background-image: url('1.jpg');
+    }
+    25%{
+        background-image: url('2.jpg');
+    }
+    50%{
+        background-image: url('3.jpg');
+    }
+    75%{
+        background-image: url('4.jpg');
+    }
+    100%{
+        background-image: url('5.jpg');
+    }
+}
+
+
+.display h1{
+    cursor: pointer;
+    align-items: center;
+    padding-top:200px ;
+    color: rgb(0, 0, 0);
+    font-family: sans-serif;
+    font-size: 100px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-fill-color: transparent;
+    
+}
+.display h1:hover{
+    color: rgb(61, 56, 56);
+    transition: 0.9s; 
+
+
+}
+.display a{
+    text-decoration: none;
+    color: rgb(17, 38, 59);
+    font-size: 70px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+
+/* .......Navbar........ */
+
+nav{
+    height: 70px;
+    width: 100%;
+    background-color: rgb(55, 52, 41);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    box-shadow: 1px 1px 6px 2px ;
+}
+nav h2{
+    font-family: sans-serif;
+    color: rgb(154, 39, 255);
+    font-size: 40px;
+    margin: 10px 0px 10px 40px;
+    cursor: pointer;
+}
+nav h2 span{
+    color: rgb(189, 37, 82);
+}
+nav input{
+    margin: 15px;
+    width:400px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid white;
+    cursor: pointer;
+
+}
+nav ul{
+    display: flex;
+    margin: 23px 70px 20px 0px;
+    color: rgb(224, 222, 222);
+    list-style: none;
+}
+nav ul li{
+    margin-left: 12px;
+    font-size: 17px;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    width: 90px;
+    text-align: center;
+
+   
+}
+nav ul li:hover{
+    background-color: rgb(121, 80, 163);
+    box-sizing: border-box;
+    height: 25px;
+    color: black;
+    border-radius: 5px;
+    transition: 0.3s;
+
+}
+
+/* ................ container .............. */
+
+
+.container{
+    background-color: rgb(218, 217, 219);
+    height: auto;
+    width: 100%;
+    padding-top: 50px;
+   
+
+}
+.box{
+    width: 70%;
+    margin: auto;
+    padding: 20px;
+}
+.box img{
+    height: 150px;
+    float: left;
+    margin-right: 30px;
+    border-radius: 2px;
+}
+.box h1{
+    margin-bottom: 10px;
+    
+}
+button{
+    margin-top:12px;
+    overflow: hidden;
+    height: 27px;
+    width: 120px;
+    background-color: rgb(89, 90, 105);
+    border-radius: 12px;
+    font-family: sans-serif;
+    font-weight: bold;
+    border: 1px solid rgb(40, 39, 40);
+}
+button:hover{
+    background-color: rgb(130, 128, 128);
+    color: rgb(0, 0, 0);
+    box-shadow: 1px 1px 5px 1px black;
+
+}
+/* ...............Materials.............. */
+
+.materials{
+    background-color: rgb(241, 241, 241);
+    height: auto;
+    padding: 20px 30px 30px 30px ;
+    text-align: center;
+    padiing-top: 20px;
+}
+.materials h1{
+    font-family: sans-serif;
+    color: black;
+    margin-bottom: 20px;
+}
+.item{
+    background-color: rgb(199, 197, 197);
+    box-shadow: 1px 1px 6px 1px;
+    margin: 20px;
+    display: inline-block;
+    height: 300px;
+    width: 200px;
+    color: black;
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+.item img{
+    height: 240px;
+    width: 180px;
+}
+
+.pages{
+    width: 40%;
+    margin: auto;
+    justify-content: space-between;
+    margin-bottom: 150px;
+    margin-top: 40px;
+    text-align: center;
+}
+.pages ul{
+   display: flex;    
+   list-style: none;
+   justify-content: space-between;
+
+}
+.pages ul li{
+   font-weight: bold;
+   background-color: rgb(46, 46, 43);
+   height: 20px;
+   width: 45px;
+   color: white;
+   border-radius: 5px;
+   box-shadow: 1px 1px 6px 2px rgb(0, 0, 0);
+   cursor: pointer;
+}
+.pages ul li:hover{
+    background-color: rgb(116, 117, 117);
+    color: black;
+}
+
+
+/* .................media quary.......... */
+
+@media (max-width:700px){
+    
+nav{
+    height: 50px;
+    width: 100%;
+    display: flex;
+}
+ nav h2{
+    font-size: 20px;
+    margin: 13px 0px 10px 40px;
+
+}
+
+
+nav input{
+    margin: 5px;
+    width:100px;
+    height: 12px;
+    border-radius: 12px;
+
+}
+nav ul{
+    display: flex;
+    margin: 17px 70px 20px 0px;
+    margin-right: 100px;
+    
+}
+nav ul li{
+    margin-left: px;
+    font-size: 13px;
+   
+} 
+.display{
+    background-image: url('l.jpg');
+    height: 200px;
+    width: 100%;
+   
+}
+
+    
+.display h1{
+    padding-top:80px ;
+    font-size: 30px;
+    padding-bottom:8px ;
+    
+}
+
+.display a{
+    font-size: 20px;
+    padding: 5px;
+    font-size: 16px;
+
+}
+.box img{
+    float: none;
+}
+.pages{
+    width:90%
+}
+
+    
+/* .container{
+    height: auto;
+}
+.box{
+    display: block;
+}
+.box h1,p,button{
+    float: left;
+} */
+
+
+}
+@media (max-width:500px)
+{
+    nav h2{
+        margin-left: 4px;
+    }
+    nav ul{
+        display: flex;
+        margin: 16px 70px 20px 0px;
+    }
+    nav ul li{
+        
+        margin-left:1px;
+        font-size: 17px;
+        width: 90px;
+        text-align: center;
+    }
+    .input{
+        height: 20px;
+        padding: 10px;
+        margin-top: 15px;
+    }
+    .pages{
+        width: 90%;
+    }
+}
